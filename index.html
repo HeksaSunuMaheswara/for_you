@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Si Cantik yang Hebat</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="slider">
+
+        <!-- ================= HALAMAN AWAL ================= -->
+        <section class="page active">
+
+            <div class="paper opening">
+
+                <p class="small-text animate">Isi Hati Berbicara</p>
+
+                <h1 class="main-title animate">
+                    Si Cantik yang Hebat
+                </h1>
+
+                <p class="subtitle animate">
+                    Aku bikin ini khusus buat Si Cantik
+                </p>
+
+                <button class="heart-button animate" onclick="nextPage()">
+                    <span>Mulai</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HALAMAN 1 ================= -->
+        <section class="page">
+
+            <div class="paper">
+
+                <span class="page-number">01</span>
+
+                <h2 class="animate">Tentang Dia</h2>
+
+                <div class="story">
+
+                    
+                    </p>
+
+                    <p class="animate intro-name">
+                        Namanya Ariska.
+                    </p>
+
+                    <p class="animate">
+                        Entah bagaimana, ia selalu berhasil tinggal di pikiranku.
+                        Dia hanya seorang gadis cantik yang tumbuh menjadi wanita hebat
+                        karena keadaan, tapi yang bikin aku suka tidak hanya itu tapiii....
+                        <p class="animate">
+                        R A H A S I A xixixixixiix.
+                    </p>
+                    </p>
+
+                </div>
+
+                <button class="next-button animate" onclick="nextPage()">
+                    Lanjut →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HALAMAN 2 ================= -->
+        <section class="page">
+
+            <div class="paper">
+
+                <span class="page-number">02</span>
+
+                <h2 class="animate">
+                    Mengapa Aku Menyukainya
+                </h2>
+
+                <div class="story">
+
+                    <p class="animate">
+                        Mungkin sulit jika harusku ungkapkan semua disini,
+                        tapi yang pasti perasaanku tetep sama dan ga berubah
+                        meskipun setelah sekian lama aku bisa liat kamu lagi.
+                    </p>
+
+                    <p class="animate">
+                        Senyumnmu yang sederhana, lucu, dan menggemaskan.
+                        Tingkahmu yang selalu membuat rindu.
+                    </p>
+
+                    <p class="animate">
+                        Kebaikan hatinya yang tulus, dan pada akhirnya,
+                        aku menyukai segala hal tentang dirinya.
+                    </p>
+
+                </div>
+
+                <button class="next-button animate" onclick="nextPage()">
+                    Lanjut →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HALAMAN 3 ================= -->
+        <section class="page">
+
+            <div class="paper">
+
+                <span class="page-number">03</span>
+
+                <h2 class="animate">
+                    Momen Berkesan
+                </h2>
+
+                <div class="story">
+
+                    <p class="animate">
+                        Aku masih ingat semuanya walaupun ada beberapa yang
+                        samar, bukan berarti aku melupakannya, hanya saja banyak
+                        sekali momen yang sudah kita lewatin bareng.
+                    </p>
+
+                    <p class="animate">
+                        Apalagi di momen itu, xixixi.
+                    </p>
+
+                </div>
+
+                <button class="next-button animate" onclick="nextPage()">
+                    Lanjut →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HALAMAN 4 ================= -->
+        <section class="page">
+
+            <div class="paper">
+
+                <span class="page-number">04</span>
+
+                <h2 class="animate">
+                    Harapan
+                </h2>
+
+                <div class="story">
+
+                    <p class="animate">
+                        Aku berharap bisa menjadi orang pertama yang kamu cari
+                        di saat kamu ada di posisi terendah, sedih, susah,
+                        senang, apa pun itu. Dan juga, kalau ada kesempatan
+                        untuk memperbaiki kesalahan di masa lalu, aku harap
+                        aku bisa memperbaikinya.
+                    </p>
+
+                    <p class="animate">
+                        Kalau kamu tanya soal kepastian, kayaknya aku siap deh
+                        xixixixi.
+                    </p>
+
+                </div>
+
+                <button class="next-button animate" onclick="nextPage()">
+                    Lanjut →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HALAMAN 5 ================= -->
+        <section class="page">
+
+            <div class="paper final-paper">
+
+                <span class="page-number">05</span>
+
+                <h2 class="animate">
+                    Untukmu
+                </h2>
+
+                <div class="final-message">
+
+                    <p class="quote animate">
+                        “Kau adalah wanita terhebat yang pernah kukenal.
+                        Tolong hidup lebih lama, ya.”
+                    </p>
+
+                    <p class="signature animate">
+                        — Sunuuu
+                    </p>
+
+                </div>
+
+                <button class="next-button restart animate" onclick="goToStart()">
+                    ← Kembali
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- INDIKATOR -->
+        <div class="indicator">
+            <span id="currentPage">01</span>
+            <span class="line"></span>
+            <span>06</span>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

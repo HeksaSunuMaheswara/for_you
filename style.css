@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background: #fff7f8;
+    color: #3f3a3b;
+    overflow: hidden;
+}
+
+
+/* ================= SLIDER ================= */
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+
+/* ================= HALAMAN ================= */
+
+.page {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        max(20px, env(safe-area-inset-top))
+        max(18px, env(safe-area-inset-right))
+        max(55px, env(safe-area-inset-bottom))
+        max(18px, env(safe-area-inset-left));
+
+    left: 100%;
+    opacity: 0;
+
+    transition:
+        left 0.55s ease,
+        opacity 0.4s ease;
+}
+
+.page.active {
+    left: 0;
+    opacity: 1;
+}
+
+.page.previous {
+    left: -100%;
+    opacity: 0;
+}
+
+
+/* ================= KERTAS ================= */
+
+.paper {
+    width: min(90vw, 430px);
+    max-height: calc(100dvh - 90px);
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: clamp(28px, 7vw, 42px)
+             clamp(22px, 6vw, 34px);
+
+    box-shadow:
+        0 10px 35px rgba(80, 50, 55, 0.08);
+
+    text-align: center;
+
+    scrollbar-width: none;
+}
+
+.paper::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ================= HALAMAN AWAL ================= */
+
+.opening {
+    min-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.small-text {
+    font-size: 14px;
+    color: #a18d91;
+
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(43px, 12vw, 64px);
+
+    line-height: 0.95;
+
+    color: #4b4144;
+
+    margin-bottom: 18px;
+}
+
+.subtitle {
+    font-size: clamp(15px, 4vw, 18px);
+
+    color: #907b80;
+
+    line-height: 1.6;
+}
+
+
+/* ================= NOMOR HALAMAN ================= */
+
+.page-number {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #c6adb2;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================= JUDUL ================= */
+
+h2 {
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(30px, 8vw, 42px);
+
+    line-height: 1.1;
+
+    color: #4b4144;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= ISI CERITA ================= */
+
+.story {
+    text-align: left;
+}
+
+.story p {
+    font-size: clamp(15px, 4.2vw, 17px);
+
+    line-height: 1.75;
+
+    color: #665b5e;
+
+    margin-bottom: 18px;
+}
+
+.story p:last-child {
+    margin-bottom: 0;
+}
+
+.intro-name {
+    font-size: 22px !important;
+    font-weight: 700;
+}
+
+/* ================= TOMBOL HATI ================= */
+
+.heart-button {
+    position: relative;
+
+    width: 105px;
+    height: 105px;
+
+    border: none;
+    background: transparent;
+
+    margin-top: 32px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-45deg);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.heart-button::before {
+    content: "";
+
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    background: #f38da5;
+
+    border-radius: 10px;
+
+    left: 16px;
+    top: 17px;
+}
+
+.heart-button::after {
+    content: "";
+
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    background: #f38da5;
+
+    border-radius: 50%;
+
+    top: -19px;
+    left: 16px;
+
+    box-shadow:
+        36px 36px 0 #f38da5;
+}
+
+.heart-button span {
+    position: relative;
+
+    z-index: 5;
+
+    transform: rotate(45deg);
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.heart-button:active {
+    transform: rotate(-45deg) scale(0.92);
+}
+
+
+/* ================= TOMBOL LANJUT ================= */
+
+.next-button {
+    margin-top: 30px;
+
+    padding: 11px 22px;
+
+    border: 1px solid #ead9dd;
+
+    border-radius: 50px;
+
+    background: #fff;
+
+    color: #8c6971;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.next-button:active {
+    transform: scale(0.95);
+}
+
+.restart {
+    margin-top: 34px;
+}
+
+
+/* ================= HALAMAN AKHIR ================= */
+
+.final-paper {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.final-message {
+    margin-top: 15px;
+}
+
+.quote {
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(23px, 6vw, 30px);
+
+    line-height: 1.4;
+
+    color: #514548;
+}
+
+.signature {
+    margin-top: 24px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #9a7c84;
+}
+
+
+/* ================= ANIMASI TEKS ================= */
+
+.animate {
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.page.active .animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page.active .animate:nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+.page.active .animate:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.page.active .animate:nth-child(3) {
+    transition-delay: 0.45s;
+}
+
+.page.active .animate:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.page.active .animate:nth-child(5) {
+    transition-delay: 0.75s;
+}
+
+
+/* ================= INDIKATOR ================= */
+
+.indicator {
+    position: fixed;
+
+    right: max(18px, env(safe-area-inset-right));
+    bottom: max(15px, env(safe-area-inset-bottom));
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #bda7ac;
+
+    z-index: 20;
+}
+
+.line {
+    width: 20px;
+    height: 1px;
+
+    background: #d9c8cc;
+}
+
+
+/* ================= HP PENDEK ================= */
+
+@media (max-height: 700px) {
+
+    .paper {
+        max-height: calc(100dvh - 70px);
+
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .opening {
+        min-height: 450px;
+    }
+
+    .main-title {
+        font-size: clamp(38px, 11vw, 52px);
+    }
+
+    h2 {
+        margin-bottom: 18px;
+    }
+
+    .story p {
+        line-height: 1.6;
+        margin-bottom: 13px;
+    }
+
+    .heart-button {
+        margin-top: 22px;
+        transform: rotate(-45deg) scale(0.88);
+    }
+}
+
+
+/* ================= HP SANGAT KECIL ================= */
+
+@media (max-height: 580px) {
+
+    .paper {
+        max-height: calc(100dvh - 55px);
+
+        padding: 20px;
+    }
+
+    .opening {
+        min-height: 390px;
+    }
+
+    .small-text {
+        margin-bottom: 8px;
+    }
+
+    .main-title {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .heart-button {
+        margin-top: 15px;
+        transform: rotate(-45deg) scale(0.75);
+    }
+
+    .next-button {
+        margin-top: 18px;
+    }
+}
